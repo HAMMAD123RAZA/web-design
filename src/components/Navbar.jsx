@@ -8,27 +8,27 @@ import { FaPhoneAlt } from 'react-icons/fa'
 const navLinks = [
   {
     title: 'Home',
-    path: '#Home',
+    path: 'Home',
   },
   {
     title: 'About Us',
-    path: '#about',
+    path: 'about',
   },
   {
     title: 'Services',
-    path: '#services',
+    path: 'services',
   },
   {
     title: 'Portfolio',
-    path: '#portfolio',
+    path: 'portfolio',
   },
   {
     title: 'Blog',
-    path: '#Blog',
+    path: 'Blog',
   },
   {
     title: 'Contact',
-    path: '#contact',
+    path: 'contact',
   },
 ]
 

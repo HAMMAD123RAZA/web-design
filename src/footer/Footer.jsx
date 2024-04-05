@@ -32,10 +32,7 @@ const Footer = () => {
 </h2>
 
 </div>
-
-
-
-            <div className="flex py-4">
+   <div className="flex py-4">
             <img src="https://www.makemywebsite.com.au/wp-content/uploads/2020/11/client-partners-verified.png" className='w-[10rem]' alt="image" />
 
                 <img src="https://www.makemywebsite.com.au/wp-content/uploads/2020/11/google-partner-badge.jpg" className='w-[8rem] ' alt="image" />
