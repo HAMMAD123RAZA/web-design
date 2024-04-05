@@ -37,58 +37,64 @@ const Navbar = () => {
 
   return (
     <>
-      <div
-        className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat"
-        style={{
-          backgroundImage: `url('https://i.pinimg.com/736x/22/1e/f0/221ef058e4718a06627d098b1addc51a.jpg')`,
-          height: '100vh',
-        }}
-      >
-        <nav className="fixed top-0 left-0 right-0 z-10 bg-transparent bg-opacity-100 overflow-hidden">
-          <div className="container mx-auto px-4 lg:py-4 flex items-center justify-between">
-            <div className="flex items-center">
-              <Link to={'/'} className="">
-                <img
-                  src="mmw-light-logo-min.png"
-                  alt="logo"
-                  style={{ width: '5rem', height: '4rem' }}
-                />
-              </Link>
-            </div>
-            <div className="md:hidden">
-              {!navbarOpen ? (
-                <button
-                  onClick={() => setNavbarOpen(true)}
-                  className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-                >
-                  <Bars3Icon className="h-5 w-5" />
-                </button>
-              ) : (
-                <button
-                  onClick={() => setNavbarOpen(false)}
-                  className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-secondary-500 hover:border-white"
-                >
-                  <XMarkIcon className="h-5 w-5" />
-                </button>
-              )}
-            </div>
-            <div className="hidden md:flex md:items-center md:justify-center md:flex-grow">
-              <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-                {navLinks.map((link, index) => (
-                  <li key={index}>
-                    <NavLink href={link.path} title={link.title} />
-                  </li>
-                ))}
-              </ul>
-              <button className="px-4 ms-20 py-1 bg-red-700 rounded text-white flex items-center">
-                <FaPhoneAlt className="text-white" />
-                <span className="ms-2">87456821</span>
-              </button>
-            </div>
-          </div>
-          {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
-        </nav>
+      <div className="relative overflow-hidden rounded-lg">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="vid.mp4" type="video/mp4" />
+          {/* Add additional source tags for different video formats if needed */}
+          Your browser does not support the video tag.
+        </video>
       </div>
+
+      <nav className="fixed top-0 left-0 right-0 z-10 bg-black bg-opacity-50 overflow-hidden">
+        <div className="container mx-auto px-4 lg:py-4 flex items-center justify-between">
+          <div className="flex items-center">
+            <Link to={'/'} className="">
+              <img
+                src="mmw-light-logo-min.png"
+                alt="logo"
+                style={{ width: '5rem', height: '4rem' }}
+              />
+            </Link>
+          </div>
+          <div className="md:hidden">
+            {!navbarOpen ? (
+              <button
+                onClick={() => setNavbarOpen(true)}
+                className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+              >
+                <Bars3Icon className="h-5 w-5" />
+              </button>
+            ) : (
+              <button
+                onClick={() => setNavbarOpen(false)}
+                className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-secondary-500 hover:border-white"
+              >
+                <XMarkIcon className="h-5 w-5" />
+              </button>
+            )}
+          </div>
+          <div className="hidden md:flex md:items-center md:justify-center md:flex-grow">
+            <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+              {navLinks.map((link, index) => (
+                <li key={index}>
+                  <NavLink href={link.path} title={link.title} />
+                </li>
+              ))}
+            </ul>
+            <button className="px-4 ms-20 py-1 bg-red-700 rounded text-white flex items-center">
+              <FaPhoneAlt className="text-white" />
+              <span className="ms-2">87456821</span>
+            </button>
+          </div>
+        </div>
+        {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      </nav>
     </>
   )
 }

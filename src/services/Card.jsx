@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Data from './Data'
+import 'aos/dist/aos.css'
+import AOS from 'aos'
 
 const Card = () => {
+  useEffect(() => {
+    AOS.init() // Initialize AOS library
+  }, [])
+
   return (
-    <div className="grid grid-cols-3">
+    <div className="flex flex-wrap justify-center">
       {Data.map((el, id) => (
         <div
+          data-aos="flip-down"
           key={id}
           className="relative w-64 h-80 m-4 shadow-lg rounded-lg overflow-hidden"
         >

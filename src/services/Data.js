@@ -32,5 +32,15 @@ const Data = [
     para: 'Lorem ipsum dolor sit amet consectetur adipisicing elitRepellat, provident laudantium distinctio, laborum sit',
     title: 'Email ',
   },
+  {
+    image: 'c2.jpg',
+    para: 'Lorem ipsum dolor sit amet consectetur adipisicing elitRepellat, provident laudantium distinctio, laborum sit',
+    title: 'Tutoring ',
+  },
+  {
+    image: 'c1.jpg',
+    para: 'Lorem ipsum dolor sit amet consectetur adipisicing elitRepellat, provident laudantium distinctio, laborum sit',
+    title: 'Data Science   ',
+  },
 ]
 export default Data

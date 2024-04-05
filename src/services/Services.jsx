@@ -13,9 +13,9 @@ const Services = () => {
             justifying your business goals.
           </p>
         </div>
-        <div className="py-4 text-center">
-          <button className="px-7 py-3 bg-black hover:bg-red-600 rounded text-white ">
-            <span className="ms-2">View All Services</span>
+        <div className="py-4 text-center pe-10 ">
+          <button className="md:px-7 md:py-3 px-3 py-3  bg-black hover:bg-red-600 rounded text-white ">
+            <span className="ms-2 ">View All Services</span>
           </button>
         </div>
       </div>

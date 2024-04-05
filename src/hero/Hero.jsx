@@ -2,21 +2,41 @@ import React from 'react'
 import { TiTick } from 'react-icons/ti'
 import Number from './Number'
 import Para from './Para'
+// import AOS from 'aos';
+
 
 const Hero = () => {
   return (
     <>
       <div className=" bg-[rgb(6,7,9)] text-white  ">
         <div className="grid md:grid-cols-2 py-9 ">
-          <div>
+          <div style={{ position: 'relative', display: 'inline-block' }}>
+            <div
+              className="rounded-full"
+              style={{
+                width: '10rem',
+                height: '10rem',
+                borderRadius: '100%',
+                backgroundColor: '#1e1e22',
+                position: 'absolute',
+                top: 160,
+                left: -20,
+                zIndex: 1,
+                padding: '1rem',
+              }}
+            >
+              <p className="px-5 py-5">
+                <span className="text-orange-400">Trusted by</span> <br /> 1000+
+                clients
+              </p>
+            </div>
             <img
               src="https://www.makemywebsite.com.au/wp-content/uploads/2022/01/makemywebiste-about.jpeg"
               alt="image"
-              // className="rounded-full w-25"
               style={{ width: '31rem', borderRadius: '50%' }}
             />
           </div>
-          {/* 2nd col */}
+
           <div>
             <h2 className="py-3 font-serif font-bold text-2xl">
               Web Design Melbourne
@@ -68,7 +88,7 @@ const Hero = () => {
           </div>
         </div>
         <Number />
-        <Para/>
+        <Para />
       </div>
     </>
   )
